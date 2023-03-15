@@ -103,7 +103,7 @@ https.get(url,(response)=>
         joke=JSON.parse(data).joke;
         if(joke==null)
         {
-                   joke=JSON.parse(data).joke;
+                   joke=JSON.parse(data).setup;
  
         }
     res.send(joke);
