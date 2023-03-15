@@ -99,8 +99,13 @@ https.get(url,(response)=>
     console.log(response.statusCode);
     response.on("data",(data)=>
     {
-        joke=JSON.parse(data).joke;
         
+        joke=JSON.parse(data).joke;
+        if(joke==null)
+        {
+                   joke=JSON.parse(data).joke;
+ 
+        }
     res.send(joke);
     }
     );
